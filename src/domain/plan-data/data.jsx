@@ -9,23 +9,27 @@ export const planData = [
     "price": 300,
     "speed": 10,
     "theme": theme300,
+    "isSelected": false,
   },
   {
     "name": "Безлимитный 450",
     "price": 450,
     "speed": 50,
     "theme": theme450,
+    "isSelected": false,
   },
   {
     "name": "Безлимитный 550",
     "price": 550,
     "speed": 100,
     "theme": theme550,
+    "isSelected": true,
   },
   {
     "name": "Безлимитный 1000",
     "price": 1000,
     "speed": 200,
     "theme": theme1000,
+    "isSelected": false,
   }
 ];

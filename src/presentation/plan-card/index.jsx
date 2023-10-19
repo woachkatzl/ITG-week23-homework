@@ -9,8 +9,14 @@ import styles from "./planCard.module.scss";
 function PlanCard(props) {
   const cardTitle = classnames(styles.card__title, props.theme.card__title);
   const cardPrice = classnames(styles.card__price, props.theme.card__price);
+  const card = classnames(
+    styles.card,
+    {
+      [styles.selected]: props.isSelected,
+    },
+  );
   return (
-    <div className={styles.card}>
+    <div className={ card }>
       <div className={styles.card__body}>
         <div className={ cardTitle }>
           <h2>{props.name}</h2>
