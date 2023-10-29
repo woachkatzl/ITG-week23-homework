@@ -10,6 +10,4 @@ import "./assets/styles/global.scss";
 
 //Рендерим приложение во входном элементе 'root'
 const root = createRoot(document.getElementById("root"));
-root.render(
-  <App/>
-);
+root.render(<App />);

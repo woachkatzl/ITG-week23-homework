@@ -8,7 +8,7 @@ import styles from "./assets/styles/app.module.scss";
 function App() {
   return (
     <div className={styles.app}>
-      {planData.map((plan, index) => 
+      {planData.map((plan, index) => (
         <PlanCard
           key={index}
           name={plan.name}
@@ -16,7 +16,8 @@ function App() {
           speed={plan.speed}
           theme={plan.theme}
           isSelected={plan.isSelected}
-        />)}
+        />
+      ))}
     </div>
   );
 }
