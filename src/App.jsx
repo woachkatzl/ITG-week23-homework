@@ -15,7 +15,6 @@ function App() {
           price={plan.price}
           speed={plan.speed}
           theme={plan.theme}
-          isSelected={plan.isSelected}
         />
       ))}
     </div>

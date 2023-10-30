@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 //Пакет classnames
 import * as classnames from "classnames";
@@ -7,13 +7,23 @@ import * as classnames from "classnames";
 import styles from "./planCard.module.scss";
 
 function PlanCard(props) {
+  //Состояния
+  const [pressed, setPressed] = useState(false);
+
+  //Функция изменения состояния
+  const handleClick = () => {
+    setPressed(!pressed);
+  };
+
+  //Составные классы
   const cardTitle = classnames(styles.card__title, props.theme.card__title);
   const cardPrice = classnames(styles.card__price, props.theme.card__price);
   const card = classnames(styles.card, {
-    [styles.selected]: props.isSelected,
+    [styles.selected]: pressed,
   });
+
   return (
-    <div className={card}>
+    <div className={card} onClick={handleClick}>
       <div className={styles.card__body}>
         <div className={cardTitle}>
           <h2>{props.name}</h2>

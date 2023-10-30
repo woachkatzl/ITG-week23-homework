@@ -2,6 +2,10 @@
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   border: 1px solid rgb(255, 255, 255);
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .card__body {
